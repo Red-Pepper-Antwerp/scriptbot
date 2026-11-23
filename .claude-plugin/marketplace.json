@@ -1,0 +1,11 @@
+{
+  "name": "revenuelab",
+  "owner": { "name": "Revenue Lab / Red Pepper" },
+  "plugins": [
+    {
+      "name": "scriptbot",
+      "source": "./",
+      "description": "Advertentiescripts voor klanten van Revenue Lab, met regie per take, naar het portaal."
+    }
+  ]
+}

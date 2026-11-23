@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "client-check": {
+      "type": "http",
+      "url": "https://ubbthfgfxhttxlkyqdlw.supabase.co/functions/v1/copilot-mcp"
+    },
+    "revenuelab-portaal": {
+      "type": "http",
+      "url": "https://ubbthfgfxhttxlkyqdlw.supabase.co/functions/v1/portaal-mcp"
+    }
+  }
+}
