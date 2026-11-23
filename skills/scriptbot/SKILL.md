@@ -78,13 +78,19 @@ filmen · een tabel Take | Tekst | Filmen | Montage · de feiten. Daaronder de *
 
 Bijsturen gebeurt in het gesprek ("hook 2 korter", "take 3 op de werf").
 
+**Sluit elke oplevering van scripts altijd af met deze vraag** (ook na elke bijsturing), in gewone taal:
+> Zijn de scripts goed? Typ **akkoord**: dan zet ik ze in het portaal en krijg je meteen de scriptlink voor de klant.
+> Wil je iets anders, zeg het gewoon (bv. "hook 2 korter", "S3 een andere invalshoek").
+
 ### 6. Naar het portaal (alleen na een uitdrukkelijk akkoord)
 Zet een script pas in het portaal als de gebruiker het **uitdrukkelijk** goedkeurt ("akkoord", "zet maar in het portaal",
 "goed zo"). Vraag het anders. Dan:
 1. `script_zetten` met het script als JSON (formaat §6 in `references/scriptformaat.md`), één aanroep per script, zonder `nr`.
 2. Meld de nummers (S1, S2, ...) en dat het script nu bij de klant ligt.
-3. Vraag of de gebruiker de **scriptlink** wil: `scriptlink` geeft de link (en maakt er een als er nog geen is). De
+3. Geef meteen de **scriptlink** (`scriptlink`; maakt er een als er nog geen is), zonder het eerst te vragen. De
    gebruiker stuurt hem **zelf** door. Jij verstuurt nooit iets naar de klant.
+4. Zeg tot slot wat er nu gebeurt: "Stuur de link naar de klant. Keurt hij goed, dan is het script klaar voor de shoot.
+   Geeft hij opmerkingen, typ dan: verwerk de opmerkingen van <klant>."
 
 Het portaal houdt geen versies bij: wat je zet, is wat de klant ziet. De klant ziet alleen de tekst (titel, openingen, de
 takes als lopende tekst), nooit de regie of de feiten. Schrijf de tekst dus zo dat ze ook zonder regie leest.
