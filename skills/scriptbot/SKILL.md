@@ -30,7 +30,8 @@ van het portaal (die zoekt in alle klanten en geeft het klant-ID). Vraag alleen 
 - **Onderwerp**: waarover gaat de advertentie?
 - **Locatie**: waar wordt er gefilmd, en wat is daar te zien (stelling, afgewerkte gevel, toonzaal, materiaal)?
 - **Wie in beeld**: de klant zelf (zaakvoerder, medewerker) of een acteur?
-- **Aantal**: hoeveel scripts en hooks? Kick-off: standaard 3 scripts met elk 2 hooks; anders standaard 1 script met 2 hooks.
+- **Aantal**: altijd **3 scripts met elk 2 hooks**, tenzij de gebruiker in de aanvraag uitdrukkelijk iets anders vraagt.
+  Vraag het niet en stel het niet voor als keuze. Elk van de 3 scripts heeft een andere invalshoek.
 - **Lengte**: standaard ±35 seconden; volg een andere lengte als de gebruiker die vraagt.
 
 ### 2. Feitencheck (altijd, vóór je schrijft)
@@ -55,7 +56,8 @@ goedkeurde en waarop hij opmerkingen gaf. Herhaal geen invalshoek of hook, tenzi
 op S2"). Leer uit de opmerkingen van de klant (toon, woorden die hij niet wil).
 
 ### 4. Invalshoeken
-Stel 3 tot 5 invalshoeken voor, elk in één regel met het feit waarop ze steunt. De gebruiker kiest (of combineert).
+Stel 4 tot 6 invalshoeken voor, elk in één regel met het feit waarop ze steunt, en zeg welke 3 je aanraadt (één per
+script). De gebruiker kiest de 3 (of combineert).
 
 ### 5. Het script
 Schrijf volgens `references/scriptformaat.md`. Kort:
