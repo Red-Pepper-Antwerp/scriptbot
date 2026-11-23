@@ -57,6 +57,7 @@ Bijwerken: `/plugin marketplace update revenuelab`.
 | Pad | Wat |
 | --- | --- |
 | `skills/scriptbot/SKILL.md` | de werkwijze en de regels |
+| `skills/scriptbot/references/stijl.md` | de schrijfstijl van Revenue Lab: soorten scripts, hooks, toon, lengte, wat nooit voorkomt |
 | `skills/scriptbot/references/scriptformaat.md` | het scriptformaat: takes met tekst, filmen en montage; de woordenlijst van de montage; het JSON-formaat voor het portaal en de videobot |
 | `.mcp.json` | de koppelingen: Client Check (`copilot-mcp`) en het portaal (`portaal-mcp`), allebei met OAuth |
 | `.claude-plugin/` | de plugin en de marketplace `revenuelab` |
