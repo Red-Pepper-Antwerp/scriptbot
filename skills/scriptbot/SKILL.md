@@ -51,7 +51,8 @@ nieuw feit dat in Client Check hoort (bv. een nieuwe prijs), mag de gebruiker ze
 alleen in als de gebruiker dat uitdrukkelijk vraagt (`add_note`).
 
 ### 3. Bestaande scripts
-Haal `scripts_van_klant` op (ook de eerder gebruikte). Vat kort samen welke invalshoeken en hooks er al zijn, wat de klant
+Haal `scripts_van_klant` op (ook de eerder gebruikte: de scripts van vóór het portaal; `klantakkoord: true` = de klant
+keurde het goed, vertrek daar vooral van voor toon, calculatortekst en CTA). Vat kort samen welke invalshoeken en hooks er al zijn, wat de klant
 goedkeurde en waarop hij opmerkingen gaf. Herhaal geen invalshoek of hook, tenzij de gebruiker het vraagt (bv. "meer hooks
 op S2"). Leer uit de opmerkingen van de klant (toon, woorden die hij niet wil).
 
