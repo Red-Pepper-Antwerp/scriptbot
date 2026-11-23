@@ -60,7 +60,9 @@ Stel 4 tot 6 invalshoeken voor, elk in één regel met het feit waarop ze steunt
 script). De gebruiker kiest de 3 (of combineert).
 
 ### 5. Het script
-Schrijf volgens `references/scriptformaat.md`. Kort:
+**Lees eerst `references/stijl.md`** (zo schrijft Revenue Lab: soorten scripts, hooks, toon, wat niet voorkomt) en
+vertrek van de vorige scripts van de klant uit stap 3 (hun toon, hun calculatortekst, hun CTA). Bij 3 scripts: drie
+verschillende soorten uit de stijlgids. Schrijf volgens `references/scriptformaat.md`. Kort:
 - **Hooks** (1-3): de gesproken opening (±2,5-6,5 s) + **visuele hook** (verplicht): kicker, grote woorden met het woord
   waarop ze wisselen, eventueel een regel eronder. Elke hook = een aparte video met dezelfde rest.
 - **Takes**: per take één gedachte, met **tekst** (wat er gezegd wordt), **filmen** (kader, plek op de locatie, actie van
@@ -108,11 +110,9 @@ Een door de klant goedgekeurd script wordt nooit vervangen: wil men toch iets an
 - **Testen** op de testklant "Dries Test"; nooit testscripts zetten bij een echte klant.
 - Geen sleutels, wachtwoorden of klantgegevens in bestanden op de laptop; alles blijft in Client Check en het portaal.
 
-## Schrijven: wat een goed script is
+## Schrijven
 
-- Spreektaal, zoals de spreker het zelf zou zeggen; korte zinnen, één gedachte per take.
-- Een hook die meteen een vraag, probleem of herkenbare situatie van de kijker raakt; concreet, geen algemeenheden.
-- Body: het concrete aanbod, wat erin zit, waarom deze klant (met bewijs uit de feiten), eventueel het prijsanker.
-- Einde: één duidelijke actie (bv. de calculator, een afspraak), gesproken en dus ook in de captions.
-- Richtduur ±35 s: ongeveer 80 tot 90 gesproken woorden in totaal (hook, body en einde), bij ±2,5 woorden per seconde.
-- Wie in beeld komt, moet het kunnen zeggen: bij de klant zelf geen moeilijke zinnen of lange opsommingen.
+Volg `references/stijl.md`. In het kort: open met de vraag die de klant zelf stelt (nooit met "Ik ben…", de firmanaam,
+het oprichtingsjaar of "vandaag staan we…"), geef meteen het antwoord, je/jij/jouw, korte zinnen in verzorgde Vlaamse
+spreektaal, geen superlatieven of uitroeptekens, sluit af met "Benieuwd…?" + "hieronder". Lengte: hook ±13 woorden,
+body + einde ±80-110 woorden (±35-45 s).
