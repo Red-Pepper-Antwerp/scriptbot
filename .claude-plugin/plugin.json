@@ -1,7 +1,7 @@
 {
   "name": "scriptbot",
-  "version": "1.0.6",
-  "description": "Advertentiescripts voor klanten van Revenue Lab: feiten uit Client Check, regie per take (filmen en montage), na akkoord in de chat finaal naar het portaal.",
+  "version": "1.1.0",
+  "description": "Advertentiescripts voor klanten van Revenue Lab: feiten uit Client Check, alleen de tekst (hooks en takes), gecontroleerd op wat de klant al heeft, na akkoord in de chat finaal naar het portaal.",
   "author": {
     "name": "Revenue Lab / Red Pepper"
   }

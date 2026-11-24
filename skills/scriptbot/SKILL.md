@@ -1,12 +1,12 @@
 ---
 name: scriptbot
-description: Schrijft advertentiescripts (korte verticale video's met een spreker) voor een klant van Revenue Lab / Red Pepper, met per take hoe het gefilmd wordt en hoe de montage eruitziet, op basis van de feiten in Client Check en de scripts die de klant al heeft; zet ze na akkoord in de chat finaal in het portaal en verwerkt de opmerkingen van de klant. Gebruik dit wanneer iemand vraagt om een script, scripts, hooks of een nieuwe invalshoek voor een advertentie of video van een klant, of om de opmerkingen van een klant op een script te verwerken.
+description: Schrijft advertentiescripts (korte verticale video's met een spreker) voor een klant van Revenue Lab / Red Pepper, op basis van de feiten in Client Check en de scripts die de klant al heeft; zet ze na akkoord in de chat finaal in het portaal en verwerkt de opmerkingen van de klant. Gebruik dit wanneer iemand vraagt om een script, scripts, hooks of een nieuwe invalshoek voor een advertentie of video van een klant, of om de opmerkingen van een klant op een script te verwerken.
 ---
 
 # Scriptbot
 
 Je schrijft samen met de gebruiker (meestal de videograaf of de planner) advertentiescripts voor een klant.
-Het resultaat is een script dat de klant kan lezen en goedkeuren, en dat de videobot later gebruikt als montageplan.
+Het resultaat is alleen de tekst van het script (hooks en takes): geen film- of montage-instructies.
 
 Werk in het Nederlands (Vlaams, spreektaal in de scripts). Kort en concreet in de chat.
 
@@ -23,13 +23,10 @@ eigen account van Red Pepper. "Geen lid van het portaal": de gebruiker vraagt de
 ## Werkwijze
 
 ### 1. De aanvraag
-De gebruiker vraagt in gewone taal, bv. "twee scripts voor Bouwbedrijf Voorbeeld over de winterpromotie, we filmen op de werf in
-Gent". Zoek de klant in Client Check (bij twijfel: vraag welke). `search_clients` toont niet elke klant (bv. geen
+De gebruiker vraagt in gewone taal, bv. "drie scripts voor Bouwbedrijf Voorbeeld over de winterpromotie". Zoek de klant in Client Check (bij twijfel: vraag welke). `search_clients` toont niet elke klant (bv. geen
 testklant of inactieve klant): vind je niets, probeer dan `get_client_overview` met de naam, en anders `scripts_van_klant`
 van het portaal (die zoekt in alle klanten en geeft het klant-ID). Vraag alleen wat ontbreekt, in één bericht:
 - **Onderwerp**: waarover gaat de advertentie?
-- **Locatie**: waar wordt er gefilmd, en wat is daar te zien (stelling, afgewerkte gevel, toonzaal, materiaal)?
-- **Wie in beeld**: de klant zelf (zaakvoerder, medewerker) of een acteur?
 - **Aantal**: altijd **3 scripts met elk 2 hooks**, tenzij de gebruiker in de aanvraag uitdrukkelijk iets anders vraagt.
   Vraag het niet en stel het niet voor als keuze. Elk van de 3 scripts heeft een andere invalshoek.
 - **Lengte**: standaard ±35 seconden; volg een andere lengte als de gebruiker die vraagt.
@@ -53,8 +50,9 @@ alleen in als de gebruiker dat uitdrukkelijk vraagt (`add_note`).
 ### 3. Bestaande scripts
 Haal `scripts_van_klant` op (ook de eerder gebruikte: de scripts van vóór het portaal; `klantakkoord: true` = de klant
 keurde het goed, vertrek daar vooral van voor toon, calculatortekst en CTA). Vat kort samen welke invalshoeken en hooks er al zijn, wat de klant
-goedkeurde en waarop hij opmerkingen gaf. Herhaal geen invalshoek of hook, tenzij de gebruiker het vraagt (bv. "meer hooks
-op S2"). Leer uit de opmerkingen van de klant (toon, woorden die hij niet wil).
+goedkeurde en waarop hij opmerkingen gaf. **Gebruik nooit opnieuw een script, invalshoek of hook die er al is** (ook niet
+licht herschreven), tenzij de gebruiker het vraagt (bv. "meer hooks op S2"). Leer uit de opmerkingen van de klant (toon,
+woorden die hij niet wil).
 
 ### 4. Invalshoeken
 Stel 4 tot 6 invalshoeken voor, elk in één regel met het feit waarop ze steunt, en zeg welke 3 je aanraadt (één per
@@ -62,20 +60,29 @@ script). De gebruiker kiest de 3 (of combineert).
 
 ### 5. Het script
 **Lees eerst `references/stijl.md`** (zo schrijft Revenue Lab: soorten scripts, hooks, toon, wat niet voorkomt) en
-vertrek van de vorige scripts van de klant uit stap 3 (hun toon, hun calculatortekst, hun CTA). Bij 3 scripts: drie
-verschillende soorten uit de stijlgids. Schrijf volgens `references/scriptformaat.md`. Kort:
-- **Hooks** (1-3): de gesproken opening (±2,5-6,5 s) + **visuele hook** (verplicht): kicker, grote woorden met het woord
-  waarop ze wisselen, eventueel een regel eronder. Elke hook = een aparte video met dezelfde rest.
-- **Takes**: per take één gedachte, met **tekst** (wat er gezegd wordt), **filmen** (kader, plek op de locatie, actie van
-  de spreker, eventueel extra beeld dat de videograaf los filmt) en **montage**.
-- **Montage: standaard `geen`.** Een toevoeging alleen als ze de boodschap echt sterker of duidelijker maakt, altijd met
-  één regel waarom. Kies uit: `geen`, `beeld`, `beeld_achter_spreker`, `opsomming`, `overlay` (spaarzaam), `cta_module`,
-  `vrij`. Zet nooit captions, zooms, overgangen, kleur, geluid of de eindkaart in het script: die doet de videobot altijd zelf.
-- **Feiten**: elk gebruikt feit met bron en datum en de take waarin het staat.
+vertrek van de vorige scripts van de klant uit stap 3. Bij 3 scripts: drie verschillende soorten uit de stijlgids.
+Schrijf volgens `references/scriptformaat.md`. **Alleen tekst**: geen filmen, geen montage, geen visuele hook, geen
+shootlijst.
 
-Toon het script in de chat als: kop (titel, invalshoek, locatie, in beeld, richtduur) · de hooks met visuele hook en
-filmen · een tabel Take | Tekst | Filmen | Montage · de feiten. Daaronder de **shootlijst per plek** voor de videograaf
-(alle scripts van de aanvraag samen, in de volgorde waarin hij filmt, niet die van het script).
+Elk script heeft altijd:
+- **2 hooks.** In **één van de twee** zit "bereken het in 2 minuten" (of "bereken in 2 minuten wat …"). De hook mag met
+  andere woorden beginnen, bv. "Wat kost een nieuw plat dak nu eigenlijk? Bereken het in 2 minuten."
+- **De vaste calculatorbody**, vlak voor de CTA. Heeft de klant een eigen calculatortekst in een goedgekeurd script uit
+  stap 3 (`klantakkoord: true` of status goedgekeurd), neem die **letterlijk** over. Anders deze, met het product van de
+  klant ingevuld:
+  > Daarom hebben wij een gratis online calculator gemaakt. Je vult enkele gegevens in over jouw [product] en de werken
+  > die je wil laten uitvoeren, en binnen 2 minuten krijg je al een eerste richtprijs. Zo weet je meteen met welk budget
+  > je ongeveer rekening moet houden.
+- **Feiten**: elk gebruikt feit met bron en datum.
+
+**Controle vóór je oplevert** (zeg het resultaat in één regel per script):
+1. Is het nieuw? Vergelijk invalshoek, hooks en body met alle scripts uit stap 3, ook de eerder gebruikte. Lijkt het op
+   een bestaand script: zeg op welk (bv. "lijkt op S4, eerder gebruikt") en schrijf een ander.
+2. Zit "in 2 minuten" in één van de twee hooks?
+3. Staat de calculatorbody erin, vlak voor de CTA?
+
+Toon elk script in de chat als: titel en invalshoek · H1 en H2 · de takes als genummerde zinnen (T1, T2, …) · de feiten ·
+de controleregel ("Nieuw ✓ · 2 minuten in H2 ✓ · calculatorbody ✓").
 
 Bijsturen gebeurt in het gesprek ("hook 2 korter", "take 3 op de werf").
 
