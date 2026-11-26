@@ -4,7 +4,7 @@ Plugin voor Claude Code waarmee het team (videograaf, planner) advertentiescript
 
 1. In gewone taal vragen, bv. *"Schrijf twee scripts voor Bouwbedrijf Voorbeeld over de winterpromotie, we filmen op de werf in Gent."*
 2. De bot controleert de feiten in **Client Check** (telkens vers) en kijkt naar de scripts die de klant al heeft.
-3. Je kiest een invalshoek; de bot schrijft het script (alleen tekst: 2 hooks en de takes, met de vaste calculatorbody) en controleert dat het nog niet gebruikt is.
+3. Je kiest een invalshoek; de bot schrijft het script (2 hooks en de takes, met de vaste calculatorbody en per take wat er gefilmd wordt) en controleert dat het nog niet gebruikt is.
 4. Na je akkoord in de chat staat het script **finaal in het portaal**. De klant leest het via de scriptlink (die je zelf
    doorstuurt), keurt goed of geeft opmerkingen.
 5. *"Verwerk de opmerkingen van de klant op Bouwbedrijf Voorbeeld"*: de bot past aan, na je akkoord staat het nieuwe script klaar.
@@ -58,7 +58,7 @@ Bijwerken: `/plugin marketplace update revenuelab`.
 | --- | --- |
 | `skills/scriptbot/SKILL.md` | de werkwijze en de regels |
 | `skills/scriptbot/references/stijl.md` | de schrijfstijl van Revenue Lab: soorten scripts, hooks, toon, lengte, wat nooit voorkomt |
-| `skills/scriptbot/references/scriptformaat.md` | het scriptformaat: titel, 2 hooks en de takes (alleen tekst), met het JSON-formaat voor het portaal |
+| `skills/scriptbot/references/scriptformaat.md` | het scriptformaat: titel, 2 hooks en de takes met filmen per take, met het JSON-formaat voor het portaal |
 | `.mcp.json` | de koppelingen: Client Check (`copilot-mcp`) en het portaal (`portaal-mcp`), allebei met OAuth |
 | `.claude-plugin/` | de plugin en de marketplace `revenuelab` |
 
